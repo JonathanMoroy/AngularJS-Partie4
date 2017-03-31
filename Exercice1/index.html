@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    </head>
+    <body ng-app="app">
+        <nav>
+            <h3>Liens des exercices</h3>
+            <ul>
+                <li><a href="../Exercice2/index.html">Exercice 2</a></li>            
+                <li><a href="../Exercice3/index.html">Exercice 3</a></li>
+                <li><a href="../Exercice4/index.html">Exercice 4</a></li>
+            </ul>
+        </nav>
+        <div ng-controller="buttonCtrl">
+            <!-- Affichage de ma variable count -->
+            <p>Compte: {{count}}</p>
+            <!-- Ajout de deux ng-click aux boutons, un pour incrémenter et l'autre pour décrémenter de 1 la variable count -->
+            <button type="button" name="add" ng-click="count = count + 1">+</button><button type="button" name="remove" ng-click="count = count - 1">-</button>
+        </div>
+        <script src="script.js" type="text/javascript"></script>
+    </body>
+</html>
