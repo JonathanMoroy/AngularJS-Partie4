@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Exercice 2</title>
+        <title>Exercice 5</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
@@ -11,18 +11,16 @@
             <h3>Liens des exercices</h3>
             <ul>
                 <li><a href="../Exercice1/index.html">Exercice 1</a></li>            
+                <li><a href="../Exercice2/index.html">Exercice 2</a></li>
                 <li><a href="../Exercice3/index.html">Exercice 3</a></li>
                 <li><a href="../Exercice4/index.html">Exercice 4</a></li>
-                <li><a href="../Exercice5/index.html">Exercice 5</a></li>
                 <li><a href="../Exercice6/index.html">Exercice 6</a></li>
             </ul>
         </nav>
-        <div ng-controller="carCtrl">
-            <!-- Ajout d'un ng-repeat pour afficher les données de mon voiture.json -->
-            <p ng-repeat="car in cars">
-                <!-- Mise en forme pour afficher la marque et la couleur -->
-                <strong>Marques: </strong>{{car.marque}} <strong>Couleurs: </strong>{{car.couleur}}
-            </p>
+        <div ng-controller="indexCtrl">
+            <!-- Ajout de deux paragraphe dont un avec un ng-show qui s'affiche ou se cache selon le bouton cliqué -->
+            <p>Coucou...</p><p ng-show="scare"><strong>BEUUUUUUUUUUUUUUH !</strong></p>
+            <button type="button" name="show" ng-click="showScare()">Afficher</button><button type="button" name="hide" ng-click="hideScare()">Cacher</button>
         </div>
         <script src="script.js" type="text/javascript"></script>
     </body>
